@@ -12,11 +12,7 @@ const whatsappRoutes = require('./routes/whatsappRoutes');
 
 const app = express();
 app.use(cors());
-app.use(express.json({
-  verify: (req, res, buf) => {
-    req.rawBody = buf;
-  }
-}));
+app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/clients', clientRoutes);
