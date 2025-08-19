@@ -24,7 +24,7 @@ app.use('/api/invoices', invoiceRoutes);
 app.use('/api/orders', orderRoutes);    
 app.use('/api/items', itemRoutes);
 app.use('/api/order-items', orderItemRoutes);
-app.use('/api/webhooks/whatsapp', whatsappRoutes);
+app.use('/api/webhooks', whatsappRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
